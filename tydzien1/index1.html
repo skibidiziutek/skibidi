@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>skibidi kalkulator</title>
+</head>
+<body>
+    <h1><a href="index.html">Kalkulator Brutto Netto</a></h1>
+    <form id="kalkulator">
+        <label for="brutto">Kwota brutto (PLN):</label><br>
+        <input type="number" id="brutto" placeholder="Wpisz kwote brutto" required><br><br>
+
+        <label for="stawka">Stawka podatkowa (%):</label><br>
+        <input type="number" id="stawka" placeholder="Wpisz stawke podatkowa" required><br><br><br>
+
+        <button type="button" id="guzik">Oblicz netto</button><br><br>
+    </form>
+    <p id="wynik">
+        Wprowadz dane.
+    </p>
+    <script>
+        document.getElementById("guzik").addEventListener("click", function () {
+        const brutto = parseFloat(document.getElementById("brutto").value);
+        const stawka = parseFloat(document.getElementById("stawka").value);
+    
+        if (isNaN(brutto) || isNaN(stawka)) {
+        document.getElementById("wynik").textContent = "Prosze wprowadzić poprawne dane.";
+        return;
+        }
+    
+        const netto = brutto - (brutto / 100) * stawka;
+        document.getElementById("wynik").textContent = `Netto wynosi: ${netto.toFixed(2)} zł`;});
+    </script>
+</body>
+</html>
