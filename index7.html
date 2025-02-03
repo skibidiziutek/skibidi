@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="karuzela.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ulubione poręczne potwory</title>
+</head>
+<body>
+    <h2><marquee id="temu" scrollamount="33"><a href="index.html" id="temu">Moje ulubione pokemony</a></marquee></h2>
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 5</div>
+          <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F21%2F01%2Fac%2F2101acea630b54ea2f3199c890d8ba77.png&f=1&nofb=1&ipt=421c8bec0b5e679ecf0a44354e9fc357edb9c7e23844666825e9057624348bea&ipo=images" style="width:100%">
+          <div class="text">1. Pikachu</div>
+        </div>
+      
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 5</div>
+          <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fpixelartmaker.com%2Fart%2F4953c28ea552078.png&f=1&nofb=1&ipt=84182e9ad22dd608890c9599dc28f859379af58702f96211d3b4512ef536b8eb&ipo=images" style="width:100%">
+          <div class="text">2. Rayquaza</div>
+        </div>
+      
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 5</div>
+          <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.pngkey.com%2Fpng%2Ffull%2F201-2014690_moltres-minecraft-epic-face-pixel-art.png&f=1&nofb=1&ipt=44f0b85e82321effffe90000040c88b3fd6d5a80a97777012d2ab9f55fe0f86e&ipo=images" style="width:100%">
+          <div class="text">3. Moltres</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">4 / 5</div>
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.pngkey.com%2Fpng%2Ffull%2F647-6477290_gyrados-png.png&f=1&nofb=1&ipt=d6b1406cb74e518b96dea2771c29a67754777e00702ed92560f26af9c47d9445&ipo=images" style="width:100%">
+            <div class="text">4. Gyarados</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">5 / 5</div>
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.wikia.nocookie.net%2Fpempyrean%2Fimages%2Fa%2Fa6%2FDragonite.png%2Frevision%2Flatest%2Fzoom-crop%2Fwidth%2F500%2Fheight%2F500%3Fcb%3D20191118042010&f=1&nofb=1&ipt=0e1b1fe2ae036d0f8c55cfc81d890b6b249949d6833bc3c97c94fa9ba11752c5&ipo=images" style="width:100%">
+            <div class="text">5. Dragonite</div>
+        </div>
+      
+
+      </div>
+      <br>
+      
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+      </div>
+      <script>
+        let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 2000); 
+} 
+      </script>
+</body>
+</html>

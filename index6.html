@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>generator vaporeonow 3000</title>
+</head>
+<body>
+    <h2><marquee id="temu" scrollamount=33><a href="index.html" id="temu">generator vaporeonow 3000</a></marquee></h2>
+    <button id="add">Dodaj Vaporeona</button>
+    <div id="vaporeony">
+    </div>
+    <script>
+    const addButton = document.getElementById('add');
+    const container = document.getElementById('vaporeony');
+
+    addButton.addEventListener('click', () => {
+    const vaporeon = document.createElement('img');
+    vaporeon.src = 'vaporeon.png'; 
+    vaporeon.classList.add('vaporeon');
+    container.appendChild(vaporeon);});
+    </script>
+</body>
+</html>

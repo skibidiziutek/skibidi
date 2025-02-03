@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kalkulator prowizji</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <marquee scrollamount="33"><a href="index.html">Kalkulator Prowizji</marquee><br><br><br><br><br>
+        <form id="form">
+    <label for="m">Marża w %:</label><br>
+    <input type="number" id="m" min="0" placeholder="Wprowadź marżę"><br><br>
+
+    <label for="s">Wartosc sprzedazy w zł:</label><br>
+    <input type="number" id="s" min="0" placeholder="Wprowadź wartość sprzedaży"><br><br>
+
+            <button type="button" id="guzik">Oblicz</button>
+        </form>
+        <div class="wyniki">
+            <h2>Pieniądze dla sprzedajacego:</h2>
+                <p id="wynik">Prosze wprowadzic dane.</p>
+        </div>
+    </div>
+<script>
+    document.getElementById("guzik").addEventListener("click", function () {
+    const m = parseFloat(document.getElementById("m").value);
+    const s = parseFloat(document.getElementById("s").value);
+
+    if (isNaN(m) || isNaN(s)) {
+    document.getElementById("wynik").textContent = "Prosze wprowadzić poprawne dane.";
+    return;
+    }
+
+    const prowizja = (m / 100) * s;
+    document.getElementById("wynik").textContent = `Prowizja wynosi: ${prowizja.toFixed(2)} zł`;});
+</script>
+</body>
+</html>
